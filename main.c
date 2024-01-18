@@ -75,6 +75,11 @@ void process_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 			return;
 		}
 	}
+	if (opcode[0] == '#')
+	{
+		comments(stack, line_number);
+		return;
+	}
 	fprintf(stderr, "L%u: uknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
