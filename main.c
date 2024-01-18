@@ -60,6 +60,7 @@ void process_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
