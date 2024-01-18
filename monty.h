@@ -52,5 +52,6 @@ int mod_op(int a, int b);
 void mod(stack_t **stack, unsigned int line_number);
 void comments(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
 
 #endif /*MONTY_H*/
