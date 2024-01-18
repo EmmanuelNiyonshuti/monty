@@ -63,6 +63,7 @@ void process_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 		{"sub", sub},
 		{"div", div_stack},
 		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
