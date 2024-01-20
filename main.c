@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	while (getline(&line, &len, file) != -1)
 	{
 		line_number++;
-		token = strtok(line, " \t\n");
+		token = strtok(line, " \t\n$");
 		if (token)
 			process_opcode(&stack, token, line_number);
 	}
