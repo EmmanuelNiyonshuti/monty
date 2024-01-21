@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	unsigned int line_number = 0;
 	char *token;
 
-	if (argc < 2 || argc > 1)
+	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		return (EXIT_FAILURE);
