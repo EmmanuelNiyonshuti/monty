@@ -13,12 +13,6 @@ void push(stack_t **stack, unsigned int line_number)
 	int value;
 	stack_t *new_node;
 
-	if (stack == NULL)
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
-
 	token = strtok(NULL, " \t\n$");
 	if (!token)
 	{
@@ -42,7 +36,7 @@ void push(stack_t **stack, unsigned int line_number)
 	new_node->next = *stack;
 
 	if (*stack)
-	(*stack)->prev = new_node;
+		(*stack)->prev = new_node;
 
 	*stack = new_node;
 }
