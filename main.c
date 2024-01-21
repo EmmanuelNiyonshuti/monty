@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	}
 	free(line);
 	fclose(file);
-	free_stack(stack, line_number);
+	free_stack(stack);
 
 	return (EXIT_SUCCESS);
 }
@@ -92,11 +92,10 @@ void process_opcode(stack_t **stack, char *opcode, unsigned int line_number)
  *
  * Return: Void
  */
-void free_stack(stack_t *stack, unsigned int line_number)
+void free_stack(stack_t *stack)
 {
 	stack_t *current = stack;
 	stack_t *next;
-	(void)line_number;
 
 	while (current)
 	{
