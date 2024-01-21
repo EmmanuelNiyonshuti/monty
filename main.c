@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	char *line = NULL;
 	size_t len = 0;
 	stack_t *stack = NULL;
-	unsigned int line_number = 0;
+	unsigned int line_number = 1;
 	char *token;
 
 	if (argc != 2)
